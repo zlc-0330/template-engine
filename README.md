@@ -1,37 +1,21 @@
-# template engine
+# mustache模板引擎
 
-#### 介绍
-mustache模板引擎
+**模板引擎是将数据要变为视图最优雅的解决方案**
 
-#### 软件架构
-软件架构说明
+mustache官方git： https://github.com/janl/mustache.js
 
+[相关技术博客](https://dried-mango.gitee.io/2021/01/08/mustache%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/)
 
-#### 安装教程
+# mustache的底层核心机理
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+![](./README/图片1.png)
 
-#### 使用说明
+**mustache库底层重点要做两个事情：**
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+① 将模板字符串编译为tokens形式
 
-#### 参与贡献
+② 将tokens结合数据，解析为dom字符串
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+![](./README/图片2.png)
 
-
-#### 特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+**tokens**是一个JS的嵌套数组，即模板字符串的JS表示，它是“抽象语法树”、“虚拟节点”等等的开山鼻祖
